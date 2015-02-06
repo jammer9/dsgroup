@@ -1,2 +1,2 @@
 # dsgroup
-accounting modules
+business accounting modules
