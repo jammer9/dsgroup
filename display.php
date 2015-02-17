@@ -29,7 +29,7 @@ include 'db_connect.php';
 
 if($_SESSION['id1']) //session id is established
 {
-	$result = mysql_query( "SELECT * FROM employee" ) or die("SELECT Error: ".mysql_error());
+	$result = mysql_query( "SELECT * FROM sls_db" ) or die("SELECT Error: ".mysql_error());
 	$num_rows = mysql_num_rows($result);
 ?>
 
@@ -55,7 +55,8 @@ if($_SESSION['id1']) //session id is established
 								{
 									echo "<article class=\"ac-small\">
 											<table cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"db-table\">
-											<tr><th>ID</th><th>NAME</th><th>ADDRESS</th><th>SALARY</th><th>JOIN_DATE</th></tr> ";
+											<tr><th>ID</th><th>PARTY</th><th>Quality</th><th>Quantity</th><th>Station</th><th>Invoice No.</th>
+											<th>Bill Date</th><th>Firm</th><th>Color</th><th>Item</th><th>Transport</th><th>Agent</th></tr> ";
 											while ($get_info = mysql_fetch_row($result)){
 												echo '<tr>';
 												foreach ($get_info as $field)
